@@ -54,7 +54,7 @@ class CASLoginHandler(BaseHandler):
         result = await self.validate_service_ticket(ticket)
         is_valid, user, attributes = result
         if not is_valid:
-            raise web.HTTPError(401)
+            raise web.HTTPError(402)
 
         app_log.debug("Service ticket was valid.")
         app_log.debug("User is '{0}'.".format(user))
